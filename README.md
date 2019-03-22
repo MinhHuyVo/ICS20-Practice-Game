@@ -9,4 +9,4 @@ Ten changes that I have made:
   7. Relocate the obstacles to many positions.
   8. Change the color of the background.
   9. Relocate the text in the scenes before and after the game.
-  10. Change the words of the text.
+  10. Change the words and the color of the text.
