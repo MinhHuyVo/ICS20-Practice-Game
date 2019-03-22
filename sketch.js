@@ -4,11 +4,13 @@ function setup() {
   createCanvas(640, 360);
   person = new Person();
 }
+var i = 0;
 
 function keyPressed(){
   if (key == ' '){
     var jump = createVector(0,- 3.5);
     person.applyForce(jump);
+    i++;
   } else if (key=='q'){
     sceneNum++;
   }
@@ -18,12 +20,15 @@ function draw() {
   
   if (sceneNum===0){
     textSize(20);
-    fill(50,200,30);
+    fill(255,0,0);
     text("2D Side Scroller", 200,180);
-    fill(80,250,250);
+    fill(80,150,250);
     text("press q to immerse in my game", 150,200);
   } else if (sceneNum===1){
   background(130,200,50);
+  fill(255,0,0);	
+	text ('Press q to exit',300,50);
+	text ('Amount of jumps: ' + i,300,100);
   translate(-person.pos.x,0);
   var gravity = createVector(0,0.1);
   person.applyForce(gravity);
@@ -46,6 +51,7 @@ function draw() {
   rect(1300,3250,50,40);
   fill(90,375,140);
   ellipse(1600, 289,90,80);
+
  
 	} else { 
   background (50,100,200);
